@@ -42,20 +42,25 @@ public class MainActivity extends AppCompatActivity {
         Type listType = new TypeToken<List<QuranModel>>(){}.getType();
         List<QuranModel> objectList = gson.fromJson(jsondata, listType);
 
-        for(int i=0;i<10;i++)
-        {
-            t1.setText(t1.getText()+objectList.get(i).getSurah_name());
-        }
+//        for(int i=0;i<10;i++)
+//        {
+//            t1.setText(t1.getText()+objectList.get(i).getSurah_name());
+//        }
+        t1.setText(getParahDetail(objectList,1));
 
     }
 
-    void getParahDetail(List<QuranModel> list1,int num)
+    String getParahDetail(List<QuranModel> list1,int num)
     {
         String str1="";
         for(QuranModel objQuran:list1)
         {
-            if(objQ)
+            if(objQuran.getJuz()==num)
+            {
+                str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+            }
         }
+        return str1;
     }
 
 
