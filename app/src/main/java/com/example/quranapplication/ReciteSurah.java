@@ -28,9 +28,11 @@ public class ReciteSurah extends AppCompatActivity {
         ArrayList<String> arrayList = (ArrayList<String>) intent.getSerializableExtra("array_list");
 
         String str1="";
+        int c=1;
         for(String st: arrayList)
         {
-            str1=str1+st+"\n\n";
+            str1=str1+String.valueOf(c)+".  "+st+"\n\n";
+            c++;
         }
         h1.setText(String.valueOf(intent.getIntExtra("parahNum",1)));
         h2.setText(intent.getStringExtra("SurahName"));
