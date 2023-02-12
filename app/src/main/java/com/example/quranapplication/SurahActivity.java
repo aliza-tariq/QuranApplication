@@ -36,7 +36,7 @@ public class SurahActivity extends AppCompatActivity {
         Intent intentParah=getIntent();
         int parahNum=intentParah.getIntExtra("parahNumber", 0);
         String msg=intentParah.getStringExtra("WelcomeMessage");
-        t1.setText(msg);
+        t1.setText("PARAH : "+String.valueOf(parahNum));
 
         List<QuranModel> objectList=MainActivity.objectList;
         ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,

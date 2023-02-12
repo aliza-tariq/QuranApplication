@@ -37,7 +37,7 @@ public class ParahActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = (String) parent.getItemAtPosition(position);
                 String []obj1=item.split(". ");
-                t2.setText("-"+obj1[1].toString()+"-");
+                //t2.setText("-"+obj1[1].toString()+"-");
                  int number=Integer.parseInt(obj1[1].toString().strip());
 
                 Intent intent11 = new Intent(ParahActivity.this, SurahActivity.class);
