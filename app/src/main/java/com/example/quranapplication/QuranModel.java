@@ -1,33 +1,33 @@
-//package com.example.quranapplication;
-//
-//public class QuranModel {
-//    private String text;
-//    private int numberInSurah;
-//    private int juz;
-//    private int manzil;
-//    private int page;
-//    private int ruku;
-//
-//    private int hizbQuarter;
-//    private int sajda;
-//    private int surah_number;
-//
-//    private String surah_name;
-//    private String englishName;
-//    private String englishNameTranslation;
-//    private String revelationType;
-//
-//    private String UrduTranslation;
-//    private String UrduTafseer;
-//    private String EnglishTranslation;
-//    private String Englishtafseer;
-//    private String SindhiTranslation;
-//    private String SindhiTafseer;
-//    private String HindiTranslation;
-//    private String HindiTafseer;
-//    private String PushtoTransation;
-//    private String PushtoTafseer;
-//
+package com.example.quranapplication;
+
+public class QuranModel {
+    private String text;
+    private int numberInSurah;
+    private int juz;
+    private int manzil;
+    private int page;
+    private int ruku;
+
+    private int hizbQuarter;
+    private int sajda;
+    private int surah_number;
+
+    private String surah_name;
+    private String englishName;
+    private String englishNameTranslation;
+    private String revelationType;
+
+    private String UrduTranslation;
+    private String UrduTafseer;
+    private String EnglishTranslation;
+    private String Englishtafseer;
+    private String SindhiTranslation;
+    private String SindhiTafseer;
+    private String HindiTranslation;
+    private String HindiTafseer;
+    private String PushtoTransation;
+    private String PushtoTafseer;
+
 //
 //    public String getText() {
 //        return text;
@@ -241,4 +241,4 @@
 //                ", PushtoTafseer='" + PushtoTafseer + '\'' +
 //                '}';
 //    }
-//}
+}
