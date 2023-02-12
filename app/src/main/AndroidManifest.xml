@@ -13,13 +13,14 @@
         android:theme="@style/Theme.QuranApplication"
         tools:targetApi="31">
         <activity
-            android:name=".SurahActivity"
-           >
-
+            android:name=".ParahActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
-        <activity
-            android:name=".AyatActivity"
-           ></activity>
+        <activity android:name=".SurahActivity"></activity>
+        <activity android:name=".AyatActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
