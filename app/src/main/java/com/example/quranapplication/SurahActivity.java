@@ -27,9 +27,12 @@ public class SurahActivity extends AppCompatActivity {
 
         list=findViewById(R.id.mylistView1);
         t1=findViewById(R.id.heading1);
+        Intent intentParah=new Intent();
+        int parahNum=intentParah.getIntExtra("parahNumber",0);
+
         List<QuranModel> objectList=MainActivity.objectList;
         ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
-                JsonHelper.getSurahNames(objectList,30));
+                JsonHelper.getSurahNames(objectList,parahNum));
         list.setAdapter(ad);
 
 
