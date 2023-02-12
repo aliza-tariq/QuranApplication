@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MainActivity"
-            tools:openDrawer="start">
+            tools:openDrawer="start"
+            android:background="#02f717">
 
 
             <RelativeLayout
@@ -35,7 +36,7 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_200"
+                    android:background="@color/black"
                     app:title="Quran Navigation"
                     app:titleTextColor="#02f717" />
 
