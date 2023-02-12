@@ -1,7 +1,10 @@
 package com.example.quranapplication;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String number = "number";
@@ -41,6 +44,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String QURAN_TABLE = "QuranMetaData";
 
+    public DBHelper(@Nullable Context context) {
+        super(context, "QuranDB.db", null, 4);
+        System.out.println("constructor called");
+
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
