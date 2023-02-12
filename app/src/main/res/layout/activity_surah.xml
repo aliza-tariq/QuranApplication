@@ -16,7 +16,7 @@
 
 
     <ListView
-        android:id="@+id/mylistView1"
+        android:id="@+id/mylistView2"
         android:layout_width="300dp"
         android:layout_height="600dp"
         android:layout_marginTop="50dp"
