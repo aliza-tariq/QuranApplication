@@ -2,6 +2,7 @@ package com.example.quranapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView t1;
     ArrayList<String> arrayList =new ArrayList<>();
     ListView list;
+
+    public static List<QuranModel> objectList = new ArrayList<>();
 
     Button btn1;
 
@@ -54,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
         Gson gson = new Gson();
         Type listType = new TypeToken<List<QuranModel>>(){}.getType();
-        List<QuranModel> objectList = gson.fromJson(jsondata, listType);
+        objectList = gson.fromJson(jsondata, listType);
+        //MySingleton s=new MySingleton(this);
+        //List<QuranModel> objectList=s.getInstance().getMyList();
+
 
 //        for(int i=0;i<10;i++)
 //        {
@@ -159,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return arrayList1;
     }
-
 
 
 }
