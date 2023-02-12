@@ -50,7 +50,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 numberInSurah + " Int, " +juz + " Int, " +manzil + " Int, " + page + " Int, " +
                 ruku + " Int, " +hizbQuarter + " Int, " +sajda + " Int, " + surah_number + " Int, " +
 
-                OPTION_SELECTED + " Int, " +RESULT + " Int, "+STATUS + " Text) ";
+                surah_name + " Text, " +englishName + " Text, " +englishNameTranslation + " Text, " +
+                revelationType + " Text, " +sajdaId + " Text, " +sajdaRecommended + " Text, " +
+                sajdaObligatory + " Text, " +
+                UrduTranslation + " Text, " +UrduTafseer + " Text, " +
+                EnglishTranslation + " Text, " +Englishtafseer + " Text, " +
+                SindhiTranslation + " Text, " +SindhiTafseer + " Text, " +
+
+                HindiTranslation + " Text, " +HindiTafseer + " Text, " +
+                PushtoTransation + " Text, " +PushtoTafseer + " Text) ";
 
         db.execSQL(createTableSTatement);
         System.out.println("db made successfully");
