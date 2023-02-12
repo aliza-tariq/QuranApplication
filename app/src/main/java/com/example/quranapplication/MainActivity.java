@@ -77,17 +77,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, SurahActivity.class);
                 int number=123456;
 
-//                intent.putExtra("WelcomeMessage","السلام علیکم");
-//                intent.putExtra("nmbr",number);
-//                intent.putExtra("Parah",Integer.parseInt(obj1[0]));
-//                intent.putExtra("ParahName",obj1[1]);
-//                intent.putExtra("array_list",getAyatDetail(objectList,78));
-//                startActivity(intent);
+                intent.putExtra("WelcomeMessage","السلام علیکم");
+                intent.putExtra("nmbr",number);
+                intent.putExtra("Parah",Integer.parseInt(obj1[0]));
+                intent.putExtra("ParahName",obj1[1]);
+                intent.putExtra("array_list",getAyatDetail(objectList,78));
+                startActivity(intent);
 
 //               arrayList.removeAll(arrayList);
                // t1.setText(getAyatDetail(objectList,78).toString());
                //t1.setText(getAyatDetail(objectList,78).get(1));
-                t1.setText(obj1[0]+"--"+obj1[1]);
+             //   t1.setText(obj1[0]+"--"+obj1[1]);
 //                ArrayAdapter ad1=new ArrayAdapter(MainActivity.this,
 //                        android.R.layout.simple_list_item_1,arrayList);
 //                list.setAdapter(ad1);

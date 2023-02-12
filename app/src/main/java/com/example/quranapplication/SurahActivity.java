@@ -14,7 +14,7 @@ public class SurahActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah);
         Intent intent = getIntent();
-//        ArrayList<String> arrayList = (ArrayList<String>) intent.getSerializableExtra("array_list");
+        ArrayList<String> arrayList = (ArrayList<String>) intent.getSerializableExtra("array_list");
 
     }
 }
