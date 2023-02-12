@@ -1,6 +1,7 @@
 package com.example.quranapplication;
 
 public class DBHelper {
+    public static final String number = "number";
     public static final String text = "text";
     public static final String numberInSurah = "numberInSurah";
     public static final String juz = "juz";
