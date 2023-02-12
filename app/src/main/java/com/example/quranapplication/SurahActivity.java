@@ -27,9 +27,14 @@ public class SurahActivity extends AppCompatActivity {
 
         list=findViewById(R.id.mylistView1);
         t1=findViewById(R.id.heading1);
-        Intent intentParah=new Intent();
-        int parahNum=intentParah.getIntExtra("parahNumber",30);
 
+//        Intent intentParah=new Intent();
+//        int parahNum=(int)intentParah.getIntExtra("parahNumber",30);
+//
+//        String msg=(String)intentParah.getStringExtra("WelcomeMessage");
+
+        Intent intentParah=getIntent();
+        int parahNum=intentParah.getIntExtra("parahNumber", 0);
         String msg=intentParah.getStringExtra("WelcomeMessage");
         t1.setText(msg);
 

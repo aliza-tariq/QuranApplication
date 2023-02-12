@@ -43,8 +43,8 @@ public class ParahActivity extends AppCompatActivity {
                 Intent intent11 = new Intent(ParahActivity.this, SurahActivity.class);
                 Toast.makeText(getApplicationContext(),String.valueOf(number),Toast.LENGTH_LONG).show();
 
-                intent11.putExtra("WelcomeMessage","السلام علیکم");
-                intent11.putExtra("parahNumber",number);
+                intent11.putExtra("parahNumber", number);
+                intent11.putExtra("WelcomeMessage", "Hello World herer!");
                 startActivity(intent11);
 
             }
