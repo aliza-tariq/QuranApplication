@@ -2,7 +2,6 @@ package com.example.quranapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        t1=findViewById(R.id.text1);
+        t1=findViewById(R.id.text3);
         btn1=findViewById(R.id.btn1);
 
         String jsondata="";
@@ -86,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, SurahActivity.class);
                 int number=123456;
 
-                intent.putExtra("WelcomeMessage","السلام علیکم");
-                intent.putExtra("nmbr",number);
-
-                intent.putExtra("array_list",getSurahNames(objectList,30));
+                //intent.putExtra("WelcomeMessage","السلام علیکم");
+                //intent.putExtra("nmbr",number);
+               // intent.putExtra("array_list",objectList);
+                intent.putExtra("objectList", String.valueOf( objectList));
                 startActivity(intent);
 
             }

@@ -1,6 +1,8 @@
 package com.example.quranapplication;
 
-public class QuranModel {
+import java.io.Serializable;
+
+public class QuranModel implements Serializable {
     public String number;
     private String text;
 
