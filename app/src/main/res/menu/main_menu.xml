@@ -7,45 +7,46 @@
             android:icon="@drawable/local_library"
             android:title="Parah" />
 
-        <item
-            android:id="@+id/nav_return"
-            android:icon="@drawable/returrn"
-            android:title="Return" />
-
-        <item
-            android:id="@+id/nav_laptop"
-            android:icon="@drawable/laptop"
-            android:title="Surah" />
-
     </group>
 
 
-    <item android:title="Reading">
+    <item android:title="Read By Surah">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_chrome_reader"
                     android:icon="@drawable/chrome_reader"
                     android:title="Surah" />
-                <item
-                    android:id="@+id/nav_rea_more"
-                    android:icon="@drawable/read_more"
-                    android:title="Read More" />
             </group>
         </menu>
     </item>
 
-    <item android:title="Comments">
+
+    <item android:title="Read By Manzil">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/Nav_add_comment"
-                    android:icon="@drawable/add_comment"
-                    android:title="Add Comment" />
+                    android:id="@+id/nav_laptop"
+                    android:icon="@drawable/laptop"
+                    android:title="Manzil" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Others">
+        <menu>
+            <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_insert_comment"
-                    android:icon="@drawable/insert_comment"
-                    android:title="Insert Comment" />
+                    android:id="@+id/githubLink"
+                    android:icon="@android:drawable/btn_star_big_on"
+                    android:title="GitHub Link" />
+
+                <item
+                    android:id="@+id/nav_return"
+                    android:icon="@drawable/returrn"
+                    android:title="Return" />
+
             </group>
         </menu>
     </item>
