@@ -24,6 +24,23 @@ public class JsonHelper {
         return arrayList;
     }
 
+    public static ArrayList<String>  getAllSurahNames(List<QuranModel> list1)
+    {
+        String str1="";
+        ArrayList<String> arrayList=new ArrayList<>();
+        for(QuranModel objQuran:list1)
+        {
+                //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                String st=Integer.toString(objQuran.getSurah_number()) + ". " + objQuran.getSurah_name().toString();
+                if(arrayList.indexOf(st)<0)
+                {
+                    arrayList.add(st);
+                }
+
+        }
+        return arrayList;
+    }
+
 
     public static ArrayList<String>  getParahNames(List<QuranModel> list1)
     {

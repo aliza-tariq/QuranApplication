@@ -38,10 +38,23 @@ public class SurahActivity extends AppCompatActivity {
         String msg=intentParah.getStringExtra("WelcomeMessage");
         t1.setText("PARAH : "+String.valueOf(parahNum));
 
-        List<QuranModel> objectList=MainActivity.objectList;
-        ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
-                JsonHelper.getSurahNames(objectList,parahNum));
-        list.setAdapter(ad);
+        List<QuranModel> objectList;
+        ArrayAdapter ad;
+        if(parahNum==0)
+        {
+             objectList=MainActivity.objectList;
+            ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
+                    JsonHelper.getAllSurahNames(objectList));
+            list.setAdapter(ad);
+
+        }
+        else {
+
+            objectList = MainActivity.objectList;
+            ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
+                    JsonHelper.getSurahNames(objectList, parahNum));
+            list.setAdapter(ad);
+        }
 
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
