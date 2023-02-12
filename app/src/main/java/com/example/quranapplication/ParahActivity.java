@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,14 +36,16 @@ public class ParahActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = (String) parent.getItemAtPosition(position);
-                Intent intent = new Intent(ParahActivity.this, SurahActivity.class);
                 String []obj1=item.split(". ");
-                t2.setText(String.valueOf(Integer.parseInt(obj1[1])));
-                int number=123456;
+                t2.setText("-"+obj1[1].toString()+"-");
+                 int number=Integer.parseInt(obj1[1].toString().strip());
 
-                intent.putExtra("WelcomeMessage","السلام علیکم");
-                intent.putExtra("parahNumber",Integer.parseInt(obj1[1]));
-                //startActivity(intent);
+                Intent intent11 = new Intent(ParahActivity.this, SurahActivity.class);
+                Toast.makeText(getApplicationContext(),String.valueOf(number),Toast.LENGTH_LONG).show();
+
+                intent11.putExtra("WelcomeMessage","السلام علیکم");
+                intent11.putExtra("parahNumber",number);
+                startActivity(intent11);
 
             }
         });
