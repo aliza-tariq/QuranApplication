@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <item android:title="Read By Parah">
+    >
+
+    <item android:title="Recite By Parah"
+      >
         <menu>
     <group android:checkableBehavior="single">
         <item
@@ -15,7 +18,7 @@
 
 
 
-    <item android:title="Read By Surah">
+    <item android:title="Recite By Surah">
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -27,7 +30,7 @@
     </item>
 
 
-    <item android:title="Read By Manzil">
+    <item android:title="Recite By Manzil">
         <menu>
             <group android:checkableBehavior="single">
                 <item
