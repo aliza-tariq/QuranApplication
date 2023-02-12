@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 //intent.putExtra("WelcomeMessage","السلام علیکم");
                 //intent.putExtra("nmbr",number);
                // intent.putExtra("array_list",objectList);
-                intent.putExtra("objectList", String.valueOf( objectList));
+                //intent.putExtra("objectList", String.valueOf( objectList));
                 startActivity(intent);
 
             }

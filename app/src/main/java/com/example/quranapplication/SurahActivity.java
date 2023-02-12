@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,8 +25,13 @@ public class SurahActivity extends AppCompatActivity {
 
         list=findViewById(R.id.mylistView1);
         t1=findViewById(R.id.text3);
+        List<QuranModel> objectList=MainActivity.objectList;
+               ArrayAdapter ad=new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1,getSurahNames(objectList,30));
+        list.setAdapter(ad);
 
-        Intent intent = getIntent();
+
+        //Intent intent = getIntent();
         //List<QuranModel> objectList = (List<QuranModel>) getIntent().getSerializableExtra("objectList");
         //List<QuranModel> objectList = (List<QuranModel>) getIntent().getSerializableExtra("objectList");
         //String str=intent.getStringExtra("objectList");
@@ -76,4 +82,24 @@ public class SurahActivity extends AppCompatActivity {
 
 
     }
+
+    ArrayList<String> getSurahNames(List<QuranModel> list1,int num)
+    {
+        String str1="";
+        ArrayList<String> arrayList=new ArrayList<>();
+        for(QuranModel objQuran:list1)
+        {
+            if(objQuran.getJuz()==num)
+            {
+                //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                String st=Integer.toString(objQuran.getSurah_number()) + ". " + objQuran.getSurah_name().toString();
+                if(arrayList.indexOf(st)<0)
+                {
+                    arrayList.add(st);
+                }
+            }
+        }
+        return arrayList;
+    }
+
 }
