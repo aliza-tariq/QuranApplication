@@ -8,6 +8,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_laptop :
                         Toast.makeText(getApplicationContext(),"Laptop is clicked",Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.githubLink:
+                        Uri webpage = Uri.parse("https://github.com/aliza-tariq/MC-A2-LearningApp.git");
+                        Intent intent1 = new
+                                Intent(Intent.ACTION_VIEW, webpage);
+                        startActivity(intent1);
                         break;
 
 
@@ -181,6 +188,12 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+    }
+    public void openWebPage(View view) {
+        Uri webpage = Uri.parse("https://github.com/aliza-tariq/MC-A2-LearningApp.git");
+        Intent intent = new
+                Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(intent);
     }
 
 }
