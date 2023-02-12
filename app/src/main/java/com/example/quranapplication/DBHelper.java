@@ -1,8 +1,12 @@
 package com.example.quranapplication;
 
-public class DBHelper {
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DBHelper extends SQLiteOpenHelper {
     public static final String number = "number";
     public static final String text = "text";
+
     public static final String numberInSurah = "numberInSurah";
     public static final String juz = "juz";
     public static final String manzil = "manzil";
@@ -10,9 +14,9 @@ public class DBHelper {
     public static final String ruku = "ruku";
     public static final String hizbQuarter = "hizbQuarter";
     public static final String sajda = "sajda";
-
-
     public static final String surah_number = "surah_number";
+
+
     public static final String surah_name = "surah_name";
     public static final String englishName = "englishName";
     public static final String englishNameTranslation = "englishNameTranslation";
@@ -38,4 +42,23 @@ public class DBHelper {
     public static final String QURAN_TABLE = "QuranMetaData";
 
 
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String createTableSTatement = "CREATE TABLE " + QURAN_TABLE + "(" + number +
+                " Integer PRIMARY KEY AUTOINCREMENT, " + text + " Text, " +
+
+                numberInSurah + " Int, " +juz + " Int, " +manzil + " Int, " + page + " Int, " +
+                ruku + " Int, " +hizbQuarter + " Int, " +sajda + " Int, " + surah_number + " Int, " +
+
+                OPTION_SELECTED + " Int, " +RESULT + " Int, "+STATUS + " Text) ";
+
+        db.execSQL(createTableSTatement);
+        System.out.println("db made successfully");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + QURAN_TABLE);
+        onCreate(sqLiteDatabase);
+    }
 }
