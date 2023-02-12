@@ -4,8 +4,8 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_book"
-            android:icon="@drawable/book"
-            android:title="Book" />
+            android:icon="@drawable/local_library"
+            android:title="Parah" />
 
         <item
             android:id="@+id/nav_return"
@@ -15,12 +15,7 @@
         <item
             android:id="@+id/nav_laptop"
             android:icon="@drawable/laptop"
-            android:title="Laptop" />
-
-        <item
-            android:id="@+id/nav_voice"
-            android:icon="@drawable/voice"
-            android:title="Voice" />
+            android:title="Surah" />
 
     </group>
 
@@ -31,7 +26,7 @@
                 <item
                     android:id="@+id/nav_chrome_reader"
                     android:icon="@drawable/chrome_reader"
-                    android:title="Chrome Reader" />
+                    android:title="Surah" />
                 <item
                     android:id="@+id/nav_rea_more"
                     android:icon="@drawable/read_more"

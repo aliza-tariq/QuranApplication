@@ -76,16 +76,16 @@ public class MainActivity extends AppCompatActivity {
             {
                 switch (menuItem.getItemId())
                 {
-//                    case R.id.nav_book :
-//                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
-//                        Intent intent = new Intent(MainActivity.this, SurahActivity.class);
-//                        startActivity(intent);
-//                        //drawerLayout.closeDrawer(GravityCompat.START);
-//                        break;
+                    case R.id.nav_book :
+                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(MainActivity.this, SurahActivity.class);
+                        startActivity(intent);
+                        //drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
 
                     case R.id.nav_return :
                         Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
-                        //drawerLayout.closeDrawer(GravityCompat.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.nav_laptop :
@@ -110,29 +110,29 @@ public class MainActivity extends AppCompatActivity {
 
         //t1=findViewById(R.id.text3);
 //        btn1=findViewById(R.id.btn1);
-//
-//        String jsondata="";
-//        try {
-//
-//            InputStream is = getAssets().open("QuranMetaData.json");
-//            int size = is.available();
-//            byte[] buffer = new byte[size];
-//            is.read(buffer);
-//            is.close();
-//            jsondata = new String(buffer, "UTF-8");
-//            System.out.println(jsondata);
-//           // t1.setText(jsondata.toString());
-//           // t1.setText("qwerty");
-//        }
-//        catch (Exception ex)
-//        {
-//            System.out.println("Exception ocuur");
-//        }
-//
-//        Gson gson = new Gson();
-//        Type listType = new TypeToken<List<QuranModel>>(){}.getType();
-//        objectList = gson.fromJson(jsondata, listType);
-//
+
+        String jsondata="";
+        try {
+
+            InputStream is = getAssets().open("QuranMetaData.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            jsondata = new String(buffer, "UTF-8");
+            System.out.println(jsondata);
+           // t1.setText(jsondata.toString());
+           // t1.setText("qwerty");
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Exception ocuur");
+        }
+
+        Gson gson = new Gson();
+        Type listType = new TypeToken<List<QuranModel>>(){}.getType();
+        objectList = gson.fromJson(jsondata, listType);
+
 //
 //
 //        //MySingleton s=new MySingleton(this);
