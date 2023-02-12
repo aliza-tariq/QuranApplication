@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 String item = (String) parent.getItemAtPosition(position);
                 Toast.makeText(MainActivity.this,item +" is Clicked",Toast.LENGTH_LONG).show();
                String []obj1=item.split(". ");
-                Intent intent = new Intent(MainActivity.this, SurahActivity.class);
+                Intent intent = new Intent(MainActivity.this, AyatActivity.class);
                 int number=123456;
 
                 intent.putExtra("WelcomeMessage","السلام علیکم");
