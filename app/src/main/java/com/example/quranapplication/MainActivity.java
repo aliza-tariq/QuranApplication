@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.nav_book :
-                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
-                        startActivity(intent);
-                        //drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
+//                    case R.id.nav_book :
+//                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
+//                        Intent intent = new Intent(MainActivity.this, SurahActivity.class);
+//                        startActivity(intent);
+//                        //drawerLayout.closeDrawer(GravityCompat.START);
+//                        break;
 
                     case R.id.nav_return :
                         Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
