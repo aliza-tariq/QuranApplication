@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReciteSurah extends AppCompatActivity {
 
@@ -30,11 +32,26 @@ public class ReciteSurah extends AppCompatActivity {
         {
             str1=str1+st+"\n\n";
         }
-        h1.setText(String.valueOf(intent.getIntExtra("Parah",2)));
+        h1.setText(String.valueOf(intent.getIntExtra("parahNum",1)));
         h2.setText(intent.getStringExtra("SurahName"));
         surah1.setText(str1);
+       List<QuranModel> objectList=MainActivity.objectList;
+        btnTaf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        btnTaf
+                Intent intent22 = new Intent(ReciteSurah.this, AyatActivity.class);
+                int number=123456;
+
+                intent22.putExtra("parahNum",intent.getIntExtra("parahNum",2));
+                intent22.putExtra("SurahName",intent.getStringExtra("SurahName"));
+
+                intent22.putExtra("array_list",JsonHelper.getAyatDetail( objectList,
+                        intent.getIntExtra("parahNum",1)));
+                startActivity(intent22);
+
+            }
+        });
 
 
     }
