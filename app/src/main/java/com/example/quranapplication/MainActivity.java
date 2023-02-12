@@ -3,17 +3,25 @@ package com.example.quranapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView t1;
+    ArrayList<String> arrayList =new ArrayList<>();
+    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,21 +54,72 @@ public class MainActivity extends AppCompatActivity {
 //        {
 //            t1.setText(t1.getText()+objectList.get(i).getSurah_name());
 //        }
-        t1.setText(getParahDetail(objectList,1));
+      //  t1.setText(getParahDetail(objectList,1));
+        list=findViewById(R.id.mylistView);
+        arrayList=getSurahNames(objectList,30);
+     //   arrayList.add("Red");
+       // arrayList.add("blue");
+       // arrayList.add("green");
+       // arrayList.add("2. 898888");
+        //t1.setText(arrayList.size());
+
+        ArrayAdapter ad=new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1,arrayList);
+        list.setAdapter(ad);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = (String) parent.getItemAtPosition(position);
+                Toast.makeText(MainActivity.this,item +" is Clicked",Toast.LENGTH_LONG).show();
+               String []obj1=item.split(".");
+               arrayList.removeAll(arrayList);
+                arrayList=getAyatDetail(objectList,78);
+                ArrayAdapter ad1=new ArrayAdapter(MainActivity.this,
+                        android.R.layout.simple_list_item_1,arrayList);
+                list.setAdapter(ad1);
+
+
+            }
+        });
 
     }
 
-    String getParahDetail(List<QuranModel> list1,int num)
+    ArrayList<String> getSurahNames(List<QuranModel> list1,int num)
     {
         String str1="";
+        ArrayList<String> arrayList=new ArrayList<>();
+        for(QuranModel objQuran:list1)
+        {
+           if(objQuran.getJuz()==num)
+            {
+                //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                String st=Integer.toString(objQuran.getSurah_number()) + ". " + objQuran.getSurah_name().toString();
+                if(arrayList.indexOf(st)<0)
+                {
+                    arrayList.add(st);
+                }
+            }
+        }
+        return arrayList;
+    }
+
+    ArrayList<String> getAyatDetail(List<QuranModel> list1,int num)
+    {
+        ArrayList<String> arrayList=new ArrayList<>();
         for(QuranModel objQuran:list1)
         {
             if(objQuran.getJuz()==num)
             {
-                str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                String st=objQuran.getText();
+                if(arrayList.indexOf(st)<0)
+                {
+                    arrayList.add(st);
+                }
             }
         }
-        return str1;
+        return arrayList;
     }
 
 
