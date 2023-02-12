@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,11 +25,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> arrayList =new ArrayList<>();
     ListView list;
 
+    Button btn1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         t1=findViewById(R.id.text1);
+        btn1=findViewById(R.id.btn1);
+
         String jsondata="";
         try {
 
@@ -64,10 +69,25 @@ public class MainActivity extends AppCompatActivity {
        // arrayList.add("2. 898888");
         //t1.setText(arrayList.size());
 
+
         ArrayAdapter ad=new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(ad);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SurahActivity.class);
+                int number=123456;
+
+                intent.putExtra("WelcomeMessage","السلام علیکم");
+                intent.putExtra("nmbr",number);
+
+                intent.putExtra("array_list",getSurahNames(objectList,30));
+                startActivity(intent);
+
+            }
+        });
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
