@@ -18,14 +18,14 @@
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="700dp"
             android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
-            android:id="@+id/mylistView"
+            android:id="@+id/mylistView1"
             android:layout_width="300dp"
             android:layout_height="600dp"
             android:layout_marginTop="50dp"
