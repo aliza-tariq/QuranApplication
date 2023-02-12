@@ -9,21 +9,35 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="319dp">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AyatActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#01263a"
+        tools:context=".AyatActivity">
 
 
-    <ListView
-        android:id="@+id/mylistView2"
-        android:layout_width="300dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="50dp"
-        android:background="#D7FFC107"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ListView
+            android:id="@+id/mylistView2"
+            android:layout_width="350dp"
+            android:layout_height="570dp"
+            android:layout_marginTop="50dp"
+            android:background="#D7FFC107"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="60dp"
+            android:backgroundTint="@color/black"
+            android:text="AYAT WITH TAFSEER"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
