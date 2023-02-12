@@ -63,13 +63,14 @@ public class SurahActivity extends AppCompatActivity {
                 String item = (String) parent.getItemAtPosition(position);
                 Toast.makeText(SurahActivity.this,item +" is Clicked",Toast.LENGTH_LONG).show();
                 String []obj1=item.split(". ");
-                Intent intent = new Intent(SurahActivity.this, AyatActivity.class);
+                Intent intent = new Intent(SurahActivity.this, ReciteSurah.class);
                 int number=123456;
 
                 intent.putExtra("WelcomeMessage","السلام علیکم");
                 intent.putExtra("nmbr",number);
                 intent.putExtra("Parah",Integer.parseInt(obj1[0]));
-                intent.putExtra("ParahName",obj1[1]);
+                intent.putExtra("SurahName",obj1[1]);
+
                 intent.putExtra("array_list",JsonHelper.getAyatDetail(objectList,Integer.parseInt(obj1[0])));
                 startActivity(intent);
             }
