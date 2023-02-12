@@ -1,7 +1,9 @@
 package com.example.quranapplication;
 
 public class QuranModel {
+    public String number;
     private String text;
+
     private int numberInSurah;
     private int juz;
     private int manzil;
@@ -17,6 +19,11 @@ public class QuranModel {
     private String englishNameTranslation;
     private String revelationType;
 
+    public String sajdaId;
+    public String sajdaRecommended;
+    public String sajdaObligatory;
+
+
     private String UrduTranslation;
     private String UrduTafseer;
     private String EnglishTranslation;
@@ -28,6 +35,43 @@ public class QuranModel {
     private String PushtoTransation;
     private String PushtoTafseer;
 
+    public QuranModel(String number, String text, int numberInSurah, int juz, int manzil, int page, int ruku, int hizbQuarter, int sajda, int surah_number, String surah_name, String englishName, String englishNameTranslation, String revelationType, String sajdaId, String sajdaRecommended, String sajdaObligatory, String urduTranslation, String urduTafseer, String englishTranslation, String englishtafseer, String sindhiTranslation, String sindhiTafseer, String hindiTranslation, String hindiTafseer, String pushtoTransation, String pushtoTafseer) {
+        this.number = number;
+        this.text = text;
+        this.numberInSurah = numberInSurah;
+        this.juz = juz;
+        this.manzil = manzil;
+        this.page = page;
+        this.ruku = ruku;
+        this.hizbQuarter = hizbQuarter;
+        this.sajda = sajda;
+        this.surah_number = surah_number;
+        this.surah_name = surah_name;
+        this.englishName = englishName;
+        this.englishNameTranslation = englishNameTranslation;
+        this.revelationType = revelationType;
+        this.sajdaId = sajdaId;
+        this.sajdaRecommended = sajdaRecommended;
+        this.sajdaObligatory = sajdaObligatory;
+        UrduTranslation = urduTranslation;
+        UrduTafseer = urduTafseer;
+        EnglishTranslation = englishTranslation;
+        Englishtafseer = englishtafseer;
+        SindhiTranslation = sindhiTranslation;
+        SindhiTafseer = sindhiTafseer;
+        HindiTranslation = hindiTranslation;
+        HindiTafseer = hindiTafseer;
+        PushtoTransation = pushtoTransation;
+        PushtoTafseer = pushtoTafseer;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     public String getText() {
         return text;
@@ -133,6 +177,30 @@ public class QuranModel {
         this.revelationType = revelationType;
     }
 
+    public String getSajdaId() {
+        return sajdaId;
+    }
+
+    public void setSajdaId(String sajdaId) {
+        this.sajdaId = sajdaId;
+    }
+
+    public String getSajdaRecommended() {
+        return sajdaRecommended;
+    }
+
+    public void setSajdaRecommended(String sajdaRecommended) {
+        this.sajdaRecommended = sajdaRecommended;
+    }
+
+    public String getSajdaObligatory() {
+        return sajdaObligatory;
+    }
+
+    public void setSajdaObligatory(String sajdaObligatory) {
+        this.sajdaObligatory = sajdaObligatory;
+    }
+
     public String getUrduTranslation() {
         return UrduTranslation;
     }
@@ -216,7 +284,8 @@ public class QuranModel {
     @Override
     public String toString() {
         return "QuranModel{" +
-                "text='" + text + '\'' +
+                "number='" + number + '\'' +
+                ", text='" + text + '\'' +
                 ", numberInSurah=" + numberInSurah +
                 ", juz=" + juz +
                 ", manzil=" + manzil +
@@ -229,6 +298,9 @@ public class QuranModel {
                 ", englishName='" + englishName + '\'' +
                 ", englishNameTranslation='" + englishNameTranslation + '\'' +
                 ", revelationType='" + revelationType + '\'' +
+                ", sajdaId='" + sajdaId + '\'' +
+                ", sajdaRecommended='" + sajdaRecommended + '\'' +
+                ", sajdaObligatory='" + sajdaObligatory + '\'' +
                 ", UrduTranslation='" + UrduTranslation + '\'' +
                 ", UrduTafseer='" + UrduTafseer + '\'' +
                 ", EnglishTranslation='" + EnglishTranslation + '\'' +
