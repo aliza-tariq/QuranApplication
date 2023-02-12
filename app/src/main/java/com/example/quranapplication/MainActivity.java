@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Type listType = new TypeToken<List<QuranModel>>(){}.getType();
         objectList = gson.fromJson(jsondata, listType);
+
+
+
         //MySingleton s=new MySingleton(this);
         //List<QuranModel> objectList=s.getInstance().getMyList();
 
@@ -67,17 +70,12 @@ public class MainActivity extends AppCompatActivity {
 //        }
       //  t1.setText(getParahDetail(objectList,1));
         list=findViewById(R.id.mylistView1);
-        arrayList=getSurahNames(objectList,30);
-     //   arrayList.add("Red");
-       // arrayList.add("blue");
-       // arrayList.add("green");
-       // arrayList.add("2. 898888");
-        //t1.setText(arrayList.size());
-
-
+        arrayList=JsonHelper.getSurahNames(objectList,30);
         ArrayAdapter ad=new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(ad);
+
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,14 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("array_list",JsonHelper.getAyatDetail(objectList,Integer.parseInt(obj1[0])));
                 startActivity(intent);
 
-//               arrayList.removeAll(arrayList);
-               // t1.setText(getAyatDetail(objectList,78).toString());
-               //t1.setText(getAyatDetail(objectList,78).get(1));
-             //   t1.setText(obj1[0]+"--"+obj1[1]);
-//                ArrayAdapter ad1=new ArrayAdapter(MainActivity.this,
-//                        android.R.layout.simple_list_item_1,arrayList);
-//                list.setAdapter(ad1);
-//
             }
         });
 
