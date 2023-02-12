@@ -5,7 +5,7 @@
         <menu>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_book"
+            android:id="@+id/Parah"
             android:icon="@drawable/local_library"
             android:title="Parah" />
 
@@ -19,7 +19,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_chrome_reader"
+                    android:id="@+id/Surah"
                     android:icon="@drawable/local_library"
                     android:title="Surah" />
             </group>
@@ -31,7 +31,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_laptop"
+                    android:id="@+id/Manzil"
                     android:icon="@drawable/local_library"
                     android:title="Manzil" />
             </group>

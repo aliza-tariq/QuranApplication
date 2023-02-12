@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,7 +26,7 @@ public class SurahActivity extends AppCompatActivity {
         setContentView(R.layout.activity_surah);
 
         list=findViewById(R.id.mylistView1);
-        t1=findViewById(R.id.text3);
+        t1=findViewById(R.id.heading1);
         List<QuranModel> objectList=MainActivity.objectList;
         ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 JsonHelper.getSurahNames(objectList,30));

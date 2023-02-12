@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.nav_book :
+                    case R.id.Surah:
                         Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(MainActivity.this, SurahActivity.class);
                         startActivity(intent);
@@ -89,9 +89,11 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.nav_laptop :
+                    case R.id.Parah:
                         Toast.makeText(getApplicationContext(),"Laptop is clicked",Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Intent intentP = new Intent(MainActivity.this, ParahActivity.class);
+                        startActivity(intentP);
+                        //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.githubLink:
                         Uri webpage = Uri.parse("https://github.com/aliza-tariq/MC-A2-LearningApp.git");
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
-                    case R.id.nav_chrome_reader :
+                    case R.id.Manzil:
                         Toast.makeText(getApplicationContext(),"Chrome Reader is clicked",Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
