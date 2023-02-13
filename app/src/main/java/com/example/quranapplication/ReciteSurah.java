@@ -42,6 +42,8 @@ public class ReciteSurah extends AppCompatActivity {
         btnTaf.setEnabled(false);
         btnTaf.setVisibility(View.GONE);
         }
+     //   btnTaf.setEnabled(false);
+
         h2.setText("Surah Name :  "+intent.getStringExtra("SurahName"));
         surah1.setText(str1);
        List<QuranModel> objectList=MainActivity.objectList;
@@ -55,8 +57,10 @@ public class ReciteSurah extends AppCompatActivity {
                 intent22.putExtra("parahNum",intent.getIntExtra("parahNum",2));
                 intent22.putExtra("SurahName",intent.getStringExtra("SurahName"));
 
-                intent22.putExtra("array_list",JsonHelper.getAyatDetail( objectList,
-                        intent.getIntExtra("parahNum",1)));
+                intent22.putExtra("array_list",arrayList);
+
+                //intent22.putExtra("array_list",JsonHelper.getAyatDetail( objectList,
+                  //      intent.getIntExtra("parahNum",1)));
                 startActivity(intent22);
 
             }
