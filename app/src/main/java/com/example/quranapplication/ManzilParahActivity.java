@@ -37,7 +37,7 @@ public class ManzilParahActivity extends AppCompatActivity {
 
         List<QuranModel> objectList=MainActivity.objectList;
         ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
-                JsonHelper.getManzilParahNames(objectList));
+                JsonHelper.getManzilParahNames(objectList,manzilNum));
         list.setAdapter(ad);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

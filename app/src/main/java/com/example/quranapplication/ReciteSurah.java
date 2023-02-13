@@ -39,6 +39,8 @@ public class ReciteSurah extends AppCompatActivity {
         if(intent.getIntExtra("parahNum",0)==0)
         {
         h1.setText("");
+        btnTaf.setEnabled(false);
+        btnTaf.setVisibility(View.GONE);
         }
         h2.setText("Surah Name :  "+intent.getStringExtra("SurahName"));
         surah1.setText(str1);

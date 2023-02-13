@@ -99,11 +99,6 @@ public class JsonHelper {
         int i=0;
         for(QuranModel objQuran:list1)
         {
-            if(i==0) {
-                i++;
-                continue;
-
-            }
             if(objQuran.getSurah_number()==num)
             {
                 //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
