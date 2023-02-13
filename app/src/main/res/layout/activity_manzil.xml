@@ -31,9 +31,9 @@
         <ListView
             android:id="@+id/mylistView1"
             android:layout_width="350dp"
-            android:layout_height="600dp"
+            android:layout_height="650dp"
             android:layout_marginTop="50dp"
-            android:background="#D7FFC107"
+            android:background="#BE60EAFB"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -66,6 +66,30 @@ public class JsonHelper {
         }
         return arrayList;
     }
+    public static ArrayList<String>  getManzilParahNames(List<QuranModel> list1,int manzilNum)
+    {
+        ArrayList<String> arrayList=new ArrayList<>();
+        ArrayList<String> counter=new ArrayList<>();
+
+        int i=0;
+        for(QuranModel objQuran:list1)
+        {
+            if(objQuran.getManzil()==manzilNum) {
+                if (counter.indexOf(String.valueOf(objQuran.getJuz())) < 0) {
+                    //str1=str1+objQuran.getSurah_number()+". "+objQuran.getSurah_name()+"\n\n\n";
+                    String st = Integer.toString(objQuran.getJuz()) + ". " + "\n" + objQuran.getEnglishName().toString() +
+                            "\n" + objQuran.getEnglishNameTranslation() + "\n" + objQuran.getRevelationType();
+                    counter.add(String.valueOf(objQuran.getJuz()));
+                    if (arrayList.indexOf(st) < 0) {
+                        arrayList.add("\n\tPARAH  " + st + "\n");
+                        if (i == 30)
+                            break;
+                    }
+                }
+            }
+        }
+        return arrayList;
+    }
 
 
 
