@@ -47,7 +47,7 @@ public class ManzilActivity extends AppCompatActivity {
                 //t2.setText("-"+obj1[1].toString()+"-");
                 int number=Integer.parseInt(obj1[1].toString().strip());
 
-                Intent intent11 = new Intent(ManzilActivity.this, ParahActivity.class);
+                Intent intent11 = new Intent(ManzilActivity.this, ManzilParahActivity.class);
                 Toast.makeText(getApplicationContext(),String.valueOf(number),Toast.LENGTH_LONG).show();
 
                 intent11.putExtra("manzilNumber", number);
