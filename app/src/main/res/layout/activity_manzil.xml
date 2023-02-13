@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
-            android:text="SELECT PARAH "
+            android:text="SELECT MANZIL"
             android:textColor="#02f717"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"

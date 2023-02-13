@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.Manzil:
                         Toast.makeText(getApplicationContext(),"Chrome Reader is clicked",Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intentM = new Intent(MainActivity.this, MainActivity.class);
+                        Intent intentM = new Intent(MainActivity.this, ManzilActivity.class);
                         startActivity(intentM);
                         break;
                 }
