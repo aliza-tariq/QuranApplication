@@ -101,11 +101,19 @@ public class MainActivity extends AppCompatActivity {
                                 Intent(Intent.ACTION_VIEW, webpage);
                         startActivity(intent1);
                         break;
+                    case R.id.githubLink1:
+                        Uri webpage2 = Uri.parse("https://github.com/aliza-tariq?tab=repositories");
+                        Intent intentg = new
+                                Intent(Intent.ACTION_VIEW, webpage2);
+                        startActivity(intentg);
+                        break;
 
 
                     case R.id.Manzil:
                         Toast.makeText(getApplicationContext(),"Chrome Reader is clicked",Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        Intent intentM = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(intentM);
                         break;
                 }
 
