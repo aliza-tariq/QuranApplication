@@ -27,13 +27,13 @@ public class ManzilActivity extends AppCompatActivity {
         list=findViewById(R.id.mylistView1);
         t2=findViewById(R.id.heading1);
         List<QuranModel> objectList=MainActivity.objectList;
-        arrayList.add("Manzil. 1");
-        arrayList.add("Manzil. 2");
-        arrayList.add("Manzil. 3");
-        arrayList.add("Manzil. 4");
-        arrayList.add("Manzil. 5");
-        arrayList.add("Manzil. 6");
-        arrayList.add("Manzil. 7");
+        arrayList.add("\nManzil. 1 \n");
+        arrayList.add("\nManzil. 2 \n");
+        arrayList.add("\nManzil. 3 \n");
+        arrayList.add("\nManzil. 4 \n");
+        arrayList.add("\nManzil. 5 \n");
+        arrayList.add("\nManzil. 6 \n");
+        arrayList.add("\nManzil. 7 \n");
 
         ArrayAdapter ad=new ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 arrayList);
@@ -45,12 +45,12 @@ public class ManzilActivity extends AppCompatActivity {
                 String item = (String) parent.getItemAtPosition(position);
                 String []obj1=item.split("Manzil. ");
                 //t2.setText("-"+obj1[1].toString()+"-");
-                int number=Integer.parseInt(obj1[0].toString().strip());
+                int number=Integer.parseInt(obj1[1].toString().strip());
 
                 Intent intent11 = new Intent(ManzilActivity.this, ParahActivity.class);
                 Toast.makeText(getApplicationContext(),String.valueOf(number),Toast.LENGTH_LONG).show();
 
-                //intent11.putExtra("parahNumber", number);
+                intent11.putExtra("manzilNumber", number);
                // intent11.putExtra("WelcomeMessage", "Hello World herer!");
                 startActivity(intent11);
 
