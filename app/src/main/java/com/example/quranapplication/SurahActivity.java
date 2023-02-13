@@ -69,7 +69,7 @@ public class SurahActivity extends AppCompatActivity {
 
                 intent.putExtra("WelcomeMessage","السلام علیکم");
                 intent.putExtra("nmbr",number);
-                intent.putExtra("parahNum",Integer.parseInt(obj1[0]));
+                intent.putExtra("parahNum",parahNum);
                 intent.putExtra("SurahName",obj1[1]+" "+obj1[2]);
 
                 intent.putExtra("array_list",JsonHelper.getAyatDetail(objectList,Integer.parseInt(obj1[0])));

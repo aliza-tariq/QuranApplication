@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.githubLink:
-                        Uri webpage = Uri.parse("https://github.com/aliza-tariq/MC-A2-LearningApp.git");
+                        Uri webpage = Uri.parse("https://github.com/aliza-tariq/QuranApplication");
                         Intent intent1 = new
                                 Intent(Intent.ACTION_VIEW, webpage);
                         startActivity(intent1);

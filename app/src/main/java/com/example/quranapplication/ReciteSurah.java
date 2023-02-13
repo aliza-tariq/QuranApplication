@@ -34,7 +34,12 @@ public class ReciteSurah extends AppCompatActivity {
             str1=str1+String.valueOf(c)+".  "+st+"\n\n";
             c++;
         }
+
         h1.setText("Parah Number :  "+String.valueOf(intent.getIntExtra("parahNum",1)));
+        if(intent.getIntExtra("parahNum",0)==0)
+        {
+        h1.setText("");
+        }
         h2.setText("Surah Name :  "+intent.getStringExtra("SurahName"));
         surah1.setText(str1);
        List<QuranModel> objectList=MainActivity.objectList;
